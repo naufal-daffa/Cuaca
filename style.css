@@ -184,51 +184,39 @@ body{
     }
 }
 
+/* Untuk layar kecil (max-width: 350px) */
 @media (max-width: 350px) {
     .card {
         margin: 30px auto 0;
         padding: 20px 15px;
+        overflow: hidden; /* Mencegah elemen keluar */
+    }
+
+    .seacrh {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px; /* Menambahkan jarak antar elemen */
     }
 
     .seacrh input {
         padding: 8px 15px;
         font-size: 14px;
-        height: 50px;
-        margin-right: 10px;
+        height: 45px;
+        flex: 1; /* Input mengambil ruang yang tersedia */
     }
 
     .seacrh button {
-        width: 50px;
-        height: 50px;
+        width: 45px; /* Tombol lebih kecil agar muat di layar kecil */
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0; /* Tombol tidak menyusut */
     }
 
     .seacrh button img {
-        width: 30px;
-    }
-
-    .weather-icon {
-        width: 100px;
-    }
-
-    .weather h1 {
-        font-size: 40px;
-    }
-
-    .weather h2 {
-        font-size: 20px;
-    }
-
-    .details {
-        flex-direction: column;
-        gap: 15px;
-        padding: 0 10px;
-    }
-
-    .humidity, .wind {
-        font-size: 18px;
-    }
-
-    .col img {
-        width: 30px;
+        width: 25px; /* Ikon lebih kecil agar proporsional */
     }
 }
